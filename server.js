@@ -6,8 +6,8 @@ dotenv.config({ path: "./config/config.env" });
 
 const app = express();
 
-app.get("/", (req, res) => {
-  res.status(200).json({ success: true, data: { id: 1 } });
+app.get("/api/v1/bootcamps", (req, res) => {
+  res.status(200).json({ success: true, msg: "Show all bootcamps" });
 });
 
 const PORT = process.env.PORT || 5000;
