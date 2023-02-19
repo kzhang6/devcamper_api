@@ -2,9 +2,7 @@
 // @route    GET /api/v1/bootcamps
 // @access   Public
 exports.getBoocamps = (req, res, next) => {
-  res
-    .status(200)
-    .json({ success: true, msg: "Show all bootcamps", hello: req.hello }); //all routes have access to the middleware
+  res.status(200).json({ success: true, msg: "Show all bootcamps" });
 };
 
 // @desc     Get single bootcamps

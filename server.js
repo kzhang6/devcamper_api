@@ -10,9 +10,10 @@ dotenv.config({ path: "./config/config.env" });
 const app = express();
 
 const logger = (req, res, next) => {
-  req.hello = "Hello World";
-  console.log("middleware ran");
-  next(); //every piece of middleware needs to call next()
+  console.log(
+    `${req.method} ${req.protocol}://${req.get("host")}${req.originalUrl}`
+  );
+  next();
 };
 
 app.use(logger);
